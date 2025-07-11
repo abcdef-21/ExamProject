@@ -1,8 +1,10 @@
 public abstract class Hero extends Character{
 
     private String weapon;
-    public Hero(Hero hero) {
-        super(hero.getName(), hero.getHp());
+    public Hero(String name,int hp,String weapon) {
+
+        super(name,hp);
+        setWeapon(weapon);
     }
     public void attack(Creature target){
         System.out.println(getName()+"は"+this.weapon+"で攻撃！"+target.getName()+"に10のダメージを与えた！");

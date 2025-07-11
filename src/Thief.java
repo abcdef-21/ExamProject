@@ -1,4 +1,4 @@
-public abstract class Thief extends Character{
+public class Thief extends Character{
     public Thief(Thief thief){
         super(thief.getName(), thief.getHp());
     }

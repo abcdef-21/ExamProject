@@ -1,4 +1,4 @@
-public abstract class Wizard extends Character{
+public class Wizard extends Character{
     int mp;
     public Wizard(Wizard wizerd){
         super(wizerd.getName(), wizerd.getHp());

@@ -35,8 +35,9 @@ public abstract class Monster implements Creature{
     public void showStatus(){
         System.out.println(name+":HP"+hp);
     }
-    public Monster(char suffix,int hp ){
+    public Monster(String name,char suffix,int hp ){
         this.suffix=suffix;
         this.hp=hp;
+        this.name=name;
     }
 }

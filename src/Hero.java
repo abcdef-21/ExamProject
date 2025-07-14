@@ -6,7 +6,6 @@ public class Hero extends Character{
         super(name,hp);
         setWeapon(weapon);
     }
-    @Override
     public void attack(Creature target){
         System.out.println(getName()+"は"+this.weapon+"で攻撃！"+target.getName()+"に10のダメージを与えた！");
         target.setHp(target.getHp()-10);

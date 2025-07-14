@@ -1,6 +1,6 @@
 public class Goblin extends Monster{
     public Goblin(char suffix,int hp){
-        super(suffix,hp);
+        super("ゴブリン",suffix,hp);
     }
     @Override
     public void attack(Creature target){

@@ -41,7 +41,8 @@ public class GameMaster {
                 j.attack(i);
             }
         }
-
+        System.out.println("ダメージをを受けた勇者が突然光だした！");
+        System.out.println("勇者はスーパーヒーローに進化した！");
 
 
 

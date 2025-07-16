@@ -29,26 +29,26 @@ public class GameMaster {
         g.showStatus();
         s.showStatus();
 
-        System.out.println("味方の総攻撃！");
+        System.out.println("\n味方の総攻撃！");
         for(Character i : party){
             for(Monster j : monstars){
                 i.attack(j);
             }
         }
-        System.out.println("敵の総攻撃！");
+        System.out.println("\n敵の総攻撃！");
         for(Monster j : monstars){
             for(Character i : party){
                 j.attack(i);
             }
         }
-        System.out.println("ダメージをを受けた勇者が突然光だした！");
+        System.out.println("\nダメージをを受けた勇者が突然光だした！");
         SuperHero sh = new SuperHero(h);
         party.set(party.indexOf(h), sh);
         System.out.println("勇者はスーパーヒーローに進化した！");
         for(Monster j : monstars) {
             sh.attack(j);
         }
-        System.out.println("---味方パーティ最終ステータス---");
+        System.out.println("\n---味方パーティ最終ステータス---");
         for(Character i : party) {
             i.showStatus();
             if(i.isAlive()){
@@ -57,7 +57,7 @@ public class GameMaster {
                 System.out.println("生存状況:戦闘不能");
             }
         }
-        System.out.println("---味方パーティ最終ステータス---");
+        System.out.println("\n---敵グループ最終ステータス---");
         for(Monster j : monstars) {
             j.showStatus();
             if(j.isAlive()){

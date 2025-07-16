@@ -6,7 +6,7 @@ public class GameMaster {
 
         Hero h = new Hero("勇者",100,"剣");
         Wizard w = new Wizard("魔法使い",60,100);
-        Thief t = new Thief("盗賊",60);
+        Thief t = new Thief("盗賊",70);
 
         Matango m = new Matango('A',45);
         Goblin g = new Goblin('A',50);
@@ -29,27 +29,43 @@ public class GameMaster {
         g.showStatus();
         s.showStatus();
 
-        System.out.println("味方の総攻撃");
+        System.out.println("味方の総攻撃！");
         for(Character i : party){
             for(Monster j : monstars){
                 i.attack(j);
             }
         }
-        System.out.println("敵の総攻撃");
+        System.out.println("敵の総攻撃！");
         for(Monster j : monstars){
             for(Character i : party){
                 j.attack(i);
             }
         }
         System.out.println("ダメージをを受けた勇者が突然光だした！");
-        System.out.println("勇者はスーパーヒーローに進化した！");
         SuperHero sh = new SuperHero(h);
         party.set(party.indexOf(h), sh);
         System.out.println("勇者はスーパーヒーローに進化した！");
         for(Monster j : monstars) {
             sh.attack(j);
         }
-
+        System.out.println("---味方パーティ最終ステータス---");
+        for(Character i : party) {
+            i.showStatus();
+            if(i.isAlive()){
+                System.out.println("生存状況:生存");
+            }else{
+                System.out.println("生存状況:戦闘不能");
+            }
+        }
+        System.out.println("---味方パーティ最終ステータス---");
+        for(Monster j : monstars) {
+            j.showStatus();
+            if(j.isAlive()){
+                System.out.println("生存状況:生存");
+            }else{
+                System.out.println("生存状況:討伐済み");
+            }
+        }
 
 
 

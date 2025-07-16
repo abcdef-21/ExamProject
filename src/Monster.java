@@ -19,16 +19,18 @@ public abstract class Monster implements Creature{
         return this.hp;
     }
     public void setHp(int hp){
-        if (hp<0) {
-            throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
+        if(hp<0){
+            this.hp=0;
+        }else{
+            this.hp = hp;
         }
-        this.hp = hp;
     }
     public final boolean isAlive(){
         if(hp>0){
             return true;
         }
         else{
+
             return false;
         }
     }
@@ -36,6 +38,9 @@ public abstract class Monster implements Creature{
         System.out.println(name+":HP"+hp);
     }
     public Monster(String name,char suffix,int hp ){
+        if (hp<0) {
+            throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
+        }
         this.suffix=suffix;
         this.hp=hp;
         this.name=name;

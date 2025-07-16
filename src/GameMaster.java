@@ -21,13 +21,14 @@ public class GameMaster {
         monstars.add(s);
 
         System.out.println("---味方パーティ---");
-        h.showStatus();
-        w.showStatus();
-        t.showStatus();
+        for(Character i : party) {
+            i.showStatus();
+        }
+
         System.out.println("---敵グループ---");
-        m.showStatus();
-        g.showStatus();
-        s.showStatus();
+        for(Monster j : monstars) {
+            j.showStatus();
+        }
 
         System.out.println("\n味方の総攻撃！");
         for(Character i : party){

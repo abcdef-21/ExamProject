@@ -43,6 +43,13 @@ public class GameMaster {
         }
         System.out.println("ダメージをを受けた勇者が突然光だした！");
         System.out.println("勇者はスーパーヒーローに進化した！");
+        SuperHero sh = new SuperHero(h);
+        party.set(party.indexOf(h), sh);
+        System.out.println("勇者はスーパーヒーローに進化した！");
+        for(Monster j : monstars) {
+            sh.attack(j);
+        }
+
 
 
 
